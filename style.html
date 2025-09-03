@@ -1,0 +1,83 @@
+/* ======== ESTILOS GERAIS ======== */
+:root {
+  --bg-color-light: #ffffff;
+  --text-color-light: #000000;
+  --bg-color-dark: #121212;
+  --text-color-dark: #f5f5f5;
+  --primary-color: #006400; /* Verde, remete a Portugal */
+  --font-size-base: 1rem;
+  --font-size-large: 1.25rem;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--bg-color-light);
+  color: var(--text-color-light);
+  line-height: 1.6;
+  transition: background 0.5s, color 0.5s;
+}
+
+body.dark-mode {
+  background-color: var(--bg-color-dark);
+  color: var(--text-color-dark);
+}
+
+header, footer {
+  background: var(--primary-color);
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+main {
+  padding: 1.5rem;
+  max-width: 900px;
+  margin: auto;
+}
+
+h1, h2 {
+  font-size: var(--font-size-large);
+}
+
+p {
+  font-size: var(--font-size-base);
+  margin-bottom: 1rem;
+}
+
+/* ======== SEÇÃO DE IMAGEM ======== */
+.hero {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.hero img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0px 4px 12px rgba(0,0,0,0.4);
+  transition: opacity 0.5s;
+}
+
+/* ======== BOTÃO ======== */
+.toggle-btn {
+  background: #000;
+  color: #fff;
+  border: none;
+  padding: 0.8rem 1.2rem;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 8px;
+  margin-top: 1rem;
+  transition: background 0.3s, color 0.3s;
+}
+
+body.dark-mode .toggle-btn {
+  background: #fff;
+  color: #000;
+}
+
+.toggle-btn:focus {
+  outline: 3px solid yellow;
+  outline-offset: 3px;
+}
