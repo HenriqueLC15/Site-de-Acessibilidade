@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cristiano Ronaldo - Landing Page</title>
+  <style>
+    /* ======== ESTILOS GERAIS ======== */
+    :root {
+      --bg-light: #ffffff;
+      --text-light: #000000;
+      --bg-dark: #000000;
+      --text-dark: #ffffff;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: var(--bg-light);
+      color: var(--text-light);
+      line-height: 1.6;
+      transition: background 0.4s, color 0.4s;
+    }
+
+    body.dark-mode {
+      background-color: var(--bg-dark);
+      color: var(--text-dark);
+    }
+
+    header, footer {
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    main {
+      padding: 2rem 1.5rem;
+      max-width: 800px;
+      margin: auto;
+      text-align: center;
+    }
+
+    section {
+      margin-bottom: 2rem;
+    }
+
+    h2 {
+      margin-bottom: 1rem;
+    }
+
+    p {
+      margin-bottom: 1rem;
+    }
+
+    /* ======== BOTÃO ======== */
+    .toggle-btn {
+      background: #000;
+      color: #fff;
+      border: none;
+      padding: 0.8rem 1.5rem;
+      font-size: 1rem;
+      cursor: pointer;
+      border-radius: 8px;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    body.dark-mode .toggle-btn {
+      background: #fff;
+      color: #000;
+    }
+
+    .toggle-btn:focus {
+      outline: 3px solid yellow;
+      outline-offset: 3px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Cristiano Ronaldo</h1>
+    <button class="toggle-btn" aria-label="Alternar entre modo claro e escuro">Alternar Tema</button>
+  </header>
+
+  <main>
+    <section class="intro">
+      <h2>Bem-vindo à Landing Page</h2>
+      <p>
+        Cristiano Ronaldo é considerado um dos maiores jogadores da história do futebol, 
+        exemplo de disciplina, dedicação e superação.
+      </p>
+    </section>
+
+    <section class="career">
+      <h2>Carreira</h2>
+      <p>
+        Desde o início no <strong>Sporting</strong>, até o estrelato em 
+        <strong>Manchester United</strong>, <strong>Real Madrid</strong>, 
+        <strong>Juventus</strong> e <strong>Al Nassr</strong>, 
+        Cristiano Ronaldo deixou sua marca em cada clube.
+      </p>
+      <p>
+        Foi no <strong>Real Madrid</strong> que atingiu o auge, conquistando 
+        4 títulos da Champions League e se tornando o maior artilheiro da história do clube.
+      </p>
+      <p>
+        Pela seleção de Portugal, conquistou a <strong>Euro 2016</strong> e a 
+        <strong>Liga das Nações da UEFA 2019</strong>.
+      </p>
+    </section>
+
+    <section class="highlights">
+      <h2>Destaques</h2>
+      <p>
+        - Maior artilheiro da Liga dos Campeões da UEFA. <br>
+        - Diversas Bolas de Ouro. <br>
+        - Recordes de gols por clubes e seleções. <br>
+        - Um dos jogadores mais icônicos da história do futebol.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <p>Landing Page em homenagem a Cristiano Ronaldo | Foco em acessibilidade</p>
+  </footer>
+
+  <script>
+    // ======== MODO CLARO/ESCURO ========
+    const toggleButton = document.querySelector('.toggle-btn');
+    const body = document.body;
+
+    function alternarTema() {
+      body.classList.toggle('dark-mode');
+    }
+
+    // Clique no botão
+    toggleButton.addEventListener('click', alternarTema);
+
+    // Atalho de teclado: Shift
+    document.addEventListener('keydown', (event) => {
+      if (event.key === "Shift") {
+        alternarTema();
+      }
+    });
+  </script>
+</body>
+</html>
